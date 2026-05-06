@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מגזין החדשות שלי</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">חדשות</a></li>
+                <li><a href="#">טכנולוגיה</a></li>
+                <li><a href="#">ספורט</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="grid-container">
+        <article class="featured-article">
+            <h1>הפריצה הגדולה של הבינה המלאכותית</h1>
+            <p class="source-link">למידע נוסף על אסטרטגיית AI ונתונים: <a href="https://www.tasc-consulting.com/aiandata/" target="_blank">TASC Consulting - AI & Data</a></p>
+            <p class="meta">פורסם ב-6 במאי 2026</p>
+            <div class="content">
+                <p>שנת 2026 מסתמנת כשנת המפנה של הבינה המלאכותית. מה שהתחיל ככלי ליצירת טקסטים הפך למערכת אוטונומית שמסוגלת לפתור בעיות מורכבות במדע, רפואה ואסטרטגיה.</p>
+            </div>
+        </article>
+
+        <section class="articles-grid">
+            <article class="card">
+                <h3>שינוי אקלים וקונפליקטים</h3>
+                <p>ניתוח הדרכים להסלמה והפחתת עצימות.</p>
+                <a href="#" class="read-more">לקריאת המאמר המלא</a>
+            </article>
+            <article class="card">
+                <h3>אזורי סכסוך בעידן הלוחמה מרחוק</h3>
+                <p>מלחמת איראן 2025–2026 כמקרה בוחן.</p>
+                <a href="#" class="read-more">לקריאת המאמר המלא</a>
+            </article>
+            <article class="card">
+                <h3>ארכיטקטורה חינוכית של סכסוך</h3>
+                <p>ניתוח השוואתי בחברות שסועות.</p>
+                <a href="#" class="read-more">לקריאת המאמר המלא</a>
+            </article>
+        </section>
+
+       <section class="form-container">
+    <h2>הרשמה לעדכוני המגזין</h2>
+    <form action="#" method="post">
+        <label>שם מלא: 
+            <input type="text" name="name" required minlength="2" placeholder="ישראל ישראלי">
+        </label>
+
+        <label>אימייל: 
+            <input type="email" name="email" required placeholder="example@mail.com">
+        </label>
+
+        <label>גיל: 
+            <input type="number" name="age" required min="18" max="99">
+        </label>
+
+        <label>תאריך הצטרפות: 
+            <input type="date" name="date" required>
+        </label>
+
+        <label>תחום עניין: 
+            <select name="topic" required>
+                <option value="">בחר תחום...</option>
+                <option value="ai">בינה מלאכותית</option>
+                <option value="climate">אקלים</option>
+                <option value="tech">טכנולוגיה</option>
+            </select>
+        </label>
+
+        <label>טלפון נייד: 
+            <input type="tel" name="phone" pattern="05[0-9]{8}" title="יש להזין מספר נייד תקין: 05XXXXXXXX">
+        </label>
+
+        <label style="display: flex; align-items: center; gap: 10px;">
+            <input type="checkbox" name="terms" required> אני מאשר את התקנון
+        </label>
+
+        <button type="submit">שלח הרשמה</button>
+    </form>
+</section>
+</body>
+</html>
