@@ -1,0 +1,144 @@
+
+@import url('reset.css');
+@import url('grid.css');
+
+body {
+    font-family: 'Assistant', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 0;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.read-more, 
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+}
+
+.read-more:hover, 
+button:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+
+.featured-article {
+    grid-column: 1 / -1; 
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.articles-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px); 
+}
+
+
+.form-container {
+    grid-column: 1 / -1; 
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.form-container form {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-container label {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+input:not([type="checkbox"]), 
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Assistant', sans-serif;
+    transition: all 0.2s ease;
+}
+
+input:focus, 
+select:focus {
+    outline: none;
+    border: 2px solid #0056b3;
+    background-color: #eef;
+}
+
+
+input:valid { border: 2px solid green; }
+input:invalid:not(:placeholder-shown) { border: 2px solid red; }
+
+
+.form-container label:has(input[type="checkbox"]) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.form-container input[type="checkbox"] {
+    width: auto;
+    border: none;
+}
+
+.form-container button {
+    width: 100%;
+    margin-top: 10px;
+}
